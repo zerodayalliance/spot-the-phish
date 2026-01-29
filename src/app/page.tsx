@@ -1,11 +1,16 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import StartScreen from "@/components/StartScreen";
 import GameScreen from "@/components/GameScreen";
 import ResultsScreen from "@/components/ResultsScreen";
-import { scenarios, POINTS_PER_CORRECT } from "@/data/scenarios";
+import {
+  getRandomScenarios,
+  POINTS_PER_CORRECT,
+  ROUNDS_PER_GAME,
+  Scenario,
+} from "@/data/scenarios";
 
 type GameStatus = "start" | "playing" | "results";
 
@@ -14,8 +19,11 @@ export default function Home() {
   const [currentRound, setCurrentRound] = useState(1);
   const [score, setScore] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [sessionScenarios, setSessionScenarios] = useState<Scenario[]>([]);
 
   const handleStart = useCallback(() => {
+    const randomScenarios = getRandomScenarios(ROUNDS_PER_GAME);
+    setSessionScenarios(randomScenarios);
     setGameStatus("playing");
     setCurrentRound(1);
     setScore(0);
@@ -30,7 +38,7 @@ export default function Home() {
   }, []);
 
   const handleNextRound = useCallback(() => {
-    if (currentRound >= scenarios.length) {
+    if (currentRound >= ROUNDS_PER_GAME) {
       setGameStatus("results");
     } else {
       setCurrentRound((prev) => prev + 1);
@@ -42,7 +50,10 @@ export default function Home() {
     setCurrentRound(1);
     setScore(0);
     setCorrectAnswers(0);
+    setSessionScenarios([]);
   }, []);
+
+  const currentScenario = sessionScenarios[currentRound - 1];
 
   return (
     <main className="min-h-screen">
@@ -58,7 +69,7 @@ export default function Home() {
           </motion.div>
         )}
 
-        {gameStatus === "playing" && (
+        {gameStatus === "playing" && currentScenario && (
           <motion.div
             key="playing"
             initial={{ opacity: 0 }}
@@ -66,7 +77,7 @@ export default function Home() {
             exit={{ opacity: 0 }}
           >
             <GameScreen
-              scenario={scenarios[currentRound - 1]}
+              scenario={currentScenario}
               currentRound={currentRound}
               score={score}
               onAnswer={handleAnswer}

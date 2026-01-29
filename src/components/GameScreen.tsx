@@ -4,7 +4,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MockBrowser from "./MockBrowser";
 import FeedbackOverlay from "./FeedbackOverlay";
-import { Scenario, POINTS_PER_CORRECT, TOTAL_ROUNDS } from "@/data/scenarios";
+import {
+  Scenario,
+  POINTS_PER_CORRECT,
+  ROUNDS_PER_GAME,
+} from "@/data/scenarios";
 import { IconAlertTriangle } from "@tabler/icons-react";
 
 interface GameScreenProps {
@@ -85,7 +89,7 @@ export default function GameScreen({
               <span className="text-2xl font-bold text-white">
                 {currentRound}
               </span>{" "}
-              / {TOTAL_ROUNDS}
+              / {ROUNDS_PER_GAME}
             </div>
             <div className="text-slate-400">
               Score:{" "}

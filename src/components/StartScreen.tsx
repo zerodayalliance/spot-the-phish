@@ -43,7 +43,7 @@ export default function StartScreen({ onStart }: StartScreenProps) {
         className="mb-4 text-5xl font-black tracking-tight text-white md:text-6xl lg:text-7xl"
       >
         CAN YOU{" "}
-        <span className="bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+        <span className="pr-1 bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
           SPOT THE FAKE?
         </span>
       </motion.h1>
@@ -54,7 +54,7 @@ export default function StartScreen({ onStart }: StartScreenProps) {
         transition={{ delay: 0.4 }}
         className="mb-12 text-xl text-slate-400 md:text-2xl"
       >
-        3 Rounds. Real vs. Scam. Test your eyes.
+        5 Rounds. Real vs. Scam. Test your eyes.
       </motion.p>
 
       <motion.button
@@ -80,7 +80,7 @@ export default function StartScreen({ onStart }: StartScreenProps) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
-        className="mt-8 text-sm text-slate-500"
+        className="mt-8 text-slate-500"
       >
         Click on the website you trust. Look carefully at the URL!
       </motion.p>

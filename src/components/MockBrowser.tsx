@@ -75,9 +75,7 @@ export default function MockBrowser({
           {isSecure && (
             <IconLock size={14} className="text-green-500 shrink-0" />
           )}
-          <span className="text-sm font-mono text-slate-200 truncate">
-            {url}
-          </span>
+          <span className="text-sm text-slate-200 truncate">{url}</span>
         </div>
       </div>
 

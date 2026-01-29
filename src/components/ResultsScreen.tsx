@@ -8,7 +8,7 @@ import {
   IconAlertTriangle,
   IconSkull,
 } from "@tabler/icons-react";
-import { TOTAL_ROUNDS, POINTS_PER_CORRECT } from "@/data/scenarios";
+import { ROUNDS_PER_GAME, POINTS_PER_CORRECT } from "@/data/scenarios";
 
 interface ResultsScreenProps {
   score: number;
@@ -53,9 +53,9 @@ export default function ResultsScreen({
   correctAnswers,
   onPlayAgain,
 }: ResultsScreenProps) {
-  const rank = getRank(correctAnswers, TOTAL_ROUNDS);
+  const rank = getRank(correctAnswers, ROUNDS_PER_GAME);
   const RankIcon = rank.icon;
-  const maxScore = TOTAL_ROUNDS * POINTS_PER_CORRECT;
+  const maxScore = ROUNDS_PER_GAME * POINTS_PER_CORRECT;
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center px-4 text-center">
@@ -96,7 +96,7 @@ export default function ResultsScreen({
           Final Score
         </div>
         <div className="text-5xl font-black text-white md:text-6xl">
-          {correctAnswers}/{TOTAL_ROUNDS}
+          {correctAnswers}/{ROUNDS_PER_GAME}
         </div>
         <div className="mt-2 text-xl text-blue-400">
           {score} / {maxScore} points
@@ -124,8 +124,8 @@ export default function ResultsScreen({
         className="text-sm text-slate-500"
       >
         <div className="mb-2 flex items-center justify-center gap-2">
-          <IconAlertTriangle size={16} className="text-yellow-500" />
-          <span>
+          <IconAlertTriangle size={20} className="text-yellow-500" />
+          <span className="text-lg">
             Stay vigilant online. Always verify URLs before entering
             credentials.
           </span>
@@ -136,12 +136,11 @@ export default function ResultsScreen({
               href="https://zerodayalliance.tech"
               target="_blank"
               rel="noopener noreferrer"
+              className="underline hover:text-blue-400"
             >
               ZeroDay Alliance
             </a>
           </span>
-          <span>{" | "}</span>
-          <span>SNU, Kolkata</span>
         </div>
       </motion.footer>
     </div>

@@ -9,10 +9,18 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Phishing Awareness Quiz | ZeroDay Alliance",
+  title: "Spot The Phish | ZeroDay Alliance",
   description:
     "Test your ability to spot phishing websites. An interactive cybersecurity awareness game by ZeroDay Alliance.",
-  keywords: ["phishing", "cybersecurity", "awareness", "quiz", "security"],
+  keywords: [
+    "phishing",
+    "cybersecurity",
+    "awareness",
+    "quiz",
+    "game",
+    "security",
+    "ZeroDay Alliance",
+  ],
 };
 
 export default function RootLayout({

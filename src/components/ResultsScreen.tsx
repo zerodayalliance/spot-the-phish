@@ -108,7 +108,7 @@ export default function ResultsScreen({
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
         onClick={onPlayAgain}
-        className="group mb-12 flex items-center gap-3 rounded-full bg-linear-to-r from-blue-600 to-cyan-600 px-10 py-5 text-xl font-bold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/40"
+        className="group mb-10 flex items-center gap-3 rounded-full bg-linear-to-r from-blue-600 to-cyan-600 px-10 py-5 text-xl font-bold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/40 cursor-pointer"
       >
         <IconRefresh
           size={24}
@@ -130,13 +130,14 @@ export default function ResultsScreen({
             credentials.
           </span>
         </div>
-        <div className="font-semibold text-slate-400">
+        <div className="mt-8 text-slate-400">
+          <span>Built by </span>
           <span>
             <a
               href="https://zerodayalliance.tech"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline hover:text-blue-400"
+              className="hover:underline hover:text-blue-400 text-slate-300"
             >
               ZeroDay Alliance
             </a>

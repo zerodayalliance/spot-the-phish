@@ -62,7 +62,7 @@ export default function StartScreen({ onStart }: StartScreenProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
         onClick={onStart}
-        className="group relative overflow-hidden rounded-full bg-linear-to-r from-blue-600 to-cyan-600 px-10 py-5 text-xl font-bold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/40"
+        className="group relative overflow-hidden rounded-full bg-linear-to-r from-blue-600 to-cyan-600 px-10 py-5 text-xl font-bold text-white shadow-lg shadow-blue-500/25 transition-all hover:shadow-xl hover:shadow-blue-500/40 cursor-pointer"
       >
         <motion.span
           className="absolute inset-0 rounded-full border-2 border-blue-400"
@@ -79,11 +79,30 @@ export default function StartScreen({ onStart }: StartScreenProps) {
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="mt-8 text-slate-500"
+        transition={{ delay: 0.8 }}
+        className="mt-8 text-xl text-slate-500"
       >
         Click on the website you trust. Look carefully at the URL!
       </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="absolute bottom-5 text-slate-400"
+      >
+        <span>Built by </span>
+        <span>
+          <a
+            href="https://zerodayalliance.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline hover:text-blue-400 text-slate-300"
+          >
+            ZeroDay Alliance
+          </a>
+        </span>
+      </motion.div>
     </div>
   );
 }

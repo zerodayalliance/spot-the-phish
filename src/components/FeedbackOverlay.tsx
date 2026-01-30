@@ -93,7 +93,7 @@ export default function FeedbackOverlay({
               transition={{ delay: 0.6 }}
               onClick={onContinue}
               className={`
-                rounded-full px-8 py-3 font-bold text-white transition-all
+                rounded-full px-8 py-3 font-bold text-white transition-all cursor-pointer
                 ${
                   isCorrect
                     ? "bg-green-600 hover:bg-green-500"

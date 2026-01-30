@@ -60,7 +60,7 @@ export const allScenarios: Scenario[] = [
   {
     id: 3,
     realUrl: "https://www.paypal.com",
-    fakeUrl: "https://www.paypaI.com",
+    fakeUrl: "https://www.paypai.com",
     realContent: {
       title: "PayPal",
       body: "The safer, easier way to pay online. Send and receive money securely.",
@@ -74,7 +74,7 @@ export const allScenarios: Scenario[] = [
       accentColor: "#003087",
     },
     explanation:
-      "The fake uses a capital 'I' instead of lowercase 'l' at the end - 'paypaI.com' vs 'paypal.com'. In many fonts, these look identical!",
+      "The fake uses a 'i' instead of 'l' at the end - 'paypai.com' vs 'paypal.com'. In many fonts, these look identical!",
     difficulty: "easy",
   },
 
@@ -115,7 +115,7 @@ export const allScenarios: Scenario[] = [
       accentColor: "#4285f4",
     },
     explanation:
-      "The real Google sign-in is 'accounts.google.com' but the fake is 'google.accounts-signin.com'. The REAL domain is 'accounts-signin.com' - a phishing site!",
+      "The real Google sign-in is 'accounts.google.com' but the fake is 'google.accounts-signin.com'. Here, 'accounts-signin.com' is the actual domain, not 'google.com'!",
     difficulty: "medium",
   },
   {
@@ -243,7 +243,7 @@ export const allScenarios: Scenario[] = [
   },
   {
     id: 12,
-    realUrl: "https://www.linkedIn.com",
+    realUrl: "https://www.linkedin.com",
     fakeUrl: "https://www.linkedln.com",
     realContent: {
       title: "LinkedIn",
@@ -258,7 +258,7 @@ export const allScenarios: Scenario[] = [
       accentColor: "#0a66c2",
     },
     explanation:
-      "Sneaky! The fake uses 'linkedln.com' with an 'L' and 'N' instead of 'linkedin.com' with an 'I' and 'N'. The letters 'ln' look like 'in' in some fonts!",
+      "Sneaky! The fake uses 'linkedln.com' (linked-l-n) instead of the correct 'linkedin.com' (linked-i-n). In many sans-serif fonts, a lowercase 'l' looks identical to an uppercase 'I' or even a lowercase 'i'!",
     difficulty: "easy",
   },
   {
@@ -319,7 +319,7 @@ export const allScenarios: Scenario[] = [
       accentColor: "#66c0f4",
     },
     explanation:
-      "Very tricky! The fake uses 'steamcommunlty.com' with an 'L' instead of 'steamcommunity.com' with an 'I'. Steam scams are extremely common - always double-check!",
+      "Very tricky! The fake uses 'steamcommunlty.com' with an 'l' (L) instead of 'steamcommunity.com' with an 'i' (I). Steam scams are extremely common - always double-check!",
     difficulty: "medium",
   },
   {
@@ -381,7 +381,7 @@ export const allScenarios: Scenario[] = [
       hasUrgency: true,
     },
     explanation:
-      "The real domain is 'secure-banking-login.com' - NOT chase.com! Banks never send urgent threats. If you're worried, go directly to chase.com by typing it yourself.",
+      "The fake domain is 'secure-banking-login.com' - NOT chase.com! Banks never send urgent threats. If you're worried, go directly to chase.com by typing it yourself.",
     difficulty: "hard",
   },
   {
@@ -550,7 +550,7 @@ export const allScenarios: Scenario[] = [
   },
   {
     id: 27,
-    realUrl: "https://www.reddIt.com",
+    realUrl: "https://www.reddit.com",
     fakeUrl: "https://www.reddlt.com",
     realContent: {
       title: "Reddit",
@@ -695,7 +695,7 @@ export const allScenarios: Scenario[] = [
   },
   {
     id: 34,
-    realUrl: "https://netbanking.hdfcbank.com",
+    realUrl: "https://hdfc.bank.in",
     fakeUrl: "https://hdfc.netbanking-secure.in",
     realContent: {
       title: "HDFC Bank NetBanking",
@@ -710,12 +710,12 @@ export const allScenarios: Scenario[] = [
       accentColor: "#004c8f",
     },
     explanation:
-      "The real HDFC NetBanking is 'netbanking.hdfcbank.com'. The fake uses 'netbanking-secure.in' as the domain with 'hdfc' as subdomain - a common trick!",
+      "The real HDFC NetBanking is 'hdfc.bank.in'. The fake uses 'netbanking-secure.in' as the domain with 'hdfc' as subdomain - a common trick!",
     difficulty: "medium",
   },
   {
     id: 35,
-    realUrl: "https://www.onlinesbi.sbi",
+    realUrl: "https://sbi.bank.in",
     fakeUrl: "https://sbi.online-banking-login.com",
     realContent: {
       title: "SBI Online Banking",
@@ -731,7 +731,7 @@ export const allScenarios: Scenario[] = [
       hasUrgency: true,
     },
     explanation:
-      "SBI uses 'onlinesbi.sbi' domain! The fake uses 'online-banking-login.com'. Also, SBI never sends threatening KYC messages via websites - visit your branch instead!",
+      "SBI uses 'sbi.bank.in' domain! The fake uses 'online-banking-login.com'. Also, SBI never sends threatening KYC messages via websites - visit your branch instead!",
     difficulty: "hard",
   },
   {

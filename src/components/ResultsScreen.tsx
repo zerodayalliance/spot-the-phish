@@ -123,12 +123,8 @@ export default function ResultsScreen({
         transition={{ delay: 1 }}
         className="text-sm text-slate-500"
       >
-        <div className="mb-2 flex items-center justify-center gap-2">
-          <IconAlertTriangle size={20} className="text-yellow-500" />
-          <span className="text-lg">
-            Stay vigilant online. Always verify URLs before entering
-            credentials.
-          </span>
+        <div className="mb-2 text-lg text-center">
+          Stay vigilant online. Always verify URLs before entering credentials.
         </div>
         <div className="mt-8 text-slate-400">
           <span>Built by </span>
